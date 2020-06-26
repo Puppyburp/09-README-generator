@@ -65,13 +65,14 @@ inquirer
   let year = today.getFullYear();
   // badge for license
   let badge;
+  let licenseInfo;
 
   // license information
   switch (response.license) {
     case "GNU GPLv3":
-      badge = `[![GNU GPLv3 License](https://img.shields.io/badge/license-GNU%20GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
+      badge = `[![GNU GPLv3 License](https://img.shields.io/badge/license-GNU%20GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)`
       
-      Copyright (c) ${year} ${response.githubUsername}
+      licenseInfo =`Copyright (c) ${year} ${response.githubUsername}
 
       This program is free software: you can redistribute it and/or modify
       it under the terms of the GNU General Public License as published by
@@ -87,9 +88,9 @@ inquirer
       along with this program.  If not, see <https://www.gnu.org/licenses/>`
       break;
       case "MIT License":
-          badge = `[![MIT License](https://img.shields.io/badge/license-MIT-yellowgreen.svg)](https://opensource.org/licenses/MIT)
+          badge = `[![MIT License](https://img.shields.io/badge/license-MIT-yellowgreen.svg)](https://opensource.org/licenses/MIT)`
           
-          Copyright ${year} ${response.githubUsername}
+          licenseInfo =`Copyright ${year} ${response.githubUsername}
 
           Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
           
@@ -98,9 +99,9 @@ inquirer
           THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.`
           break;
       case "Apache License 2.0":
-          badge = `[![Apache License 2.0](https://img.shields.io/badge/license-Apache%202.0-orange.svg)](https://opensource.org/licenses/Apache-2.0)
+          badge = `[![Apache License 2.0](https://img.shields.io/badge/license-Apache%202.0-orange.svg)](https://opensource.org/licenses/Apache-2.0)`
 
-          Copyright ${year} ${response.githubUsername}
+          licenseInfo =`Copyright ${year} ${response.githubUsername}
 
           Licensed under the Apache License, Version 2.0 (the "License");
           you may not use this file except in compliance with the License.
@@ -116,9 +117,9 @@ inquirer
           break;
 
       case "BSD 3-clause":
-          badge = `[![BSD 3-clause](https://img.shields.io/badge/license-BSD%203--Clause-lightgrey.svg)](https://opensource.org/licenses/BSD-3-Clause)
+          badge = `[![BSD 3-clause](https://img.shields.io/badge/license-BSD%203--Clause-lightgrey.svg)](https://opensource.org/licenses/BSD-3-Clause)`
 
-          Copyright ${year} ${response.githubUsername}
+          licenseInfo =`Copyright ${year} ${response.githubUsername}
 
           Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
           
@@ -131,9 +132,9 @@ inquirer
           THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.`
           break;
           case "Boost Software License 1.0":
-          badge = `[![Boost Software License 1.0](https://img.shields.io/badge/license-BSL%201.0-blue.svg)](https://opensource.org/licenses/BSL-1.0)
+          badge = `[![Boost Software License 1.0](https://img.shields.io/badge/license-BSL%201.0-blue.svg)](https://opensource.org/licenses/BSL-1.0)`
 
-          Copyright ${year} ${response.githubUsername}
+          licenseInfo =`Copyright ${year} ${response.githubUsername}
           
           Permission is hereby granted, free of charge, to any person or organization obtaining a copy of the software and accompanying documentation covered by this license (the "Software") to use, reproduce, display, distribute, execute, and transmit the Software, and to prepare derivative works of the Software, and to permit third-parties to whom the Software is furnished to do so, all subject to the following:
 
@@ -142,9 +143,9 @@ inquirer
           THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE LIABLE FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.`
           break;
           case "The Unlicense":
-          badge = `[![The Unlicense](https://img.shields.io/badge/license-The%20Unlicense-yellow.svg)](https://opensource.org/licenses/unlicense)
+          badge = `[![The Unlicense](https://img.shields.io/badge/license-The%20Unlicense-yellow.svg)](https://opensource.org/licenses/unlicense)`
 
-          Copyright ${year} ${response.githubUsername}
+          licenseInfo =`Copyright ${year} ${response.githubUsername}
           
           This is free and unencumbered software released into the public domain.
 
@@ -161,13 +162,17 @@ inquirer
   }
 // create the README doc
 const readmeInputs = `
-#Title
-${response.title}
-------------------------------------
-##Description
+
+# ${response.title}
+
+${badge}
+
+## Description
 ${response.description}
-------------------------------------
-##Table of Contents:
+
+---
+
+## Table of Contents:
   1. [License](#License)
   2. [Dependencies](#Dependencies)
   3. [Tests](#Tests)
@@ -175,30 +180,40 @@ ${response.description}
   5. [Contributions](#Contributions)
   6. [Questions](#Questions)
 
-------------------------------------
-##License
-${badge}
+---
+
+## License
 ${response.license}
-------------------------------------
-##Dependencies
+
+---
+
+## Dependencies
 ${response.dependencies}
-------------------------------------
-##Tests
+
+---
+
+## Tests
 ${response.tests}
-------------------------------------
-##Usage 
+
+---
+
+## Usage 
 ${response.usage}
-------------------------------------
-##Contributions
+
+---
+
+## Contributions
 ${response.contributions}
-------------------------------------
-##Questions
+
+---
+
+## Questions
 Please direction questions to ${response.githubUsername} or email ${response.email}
 `
 console.log(response);
 
   // write the README, tell user the file has been created
-  fs.writeFile("README.md", readmeInputs, function(err){
+  fs.writeFile(`${response.title}__README.md`, readmeInputs, function(err){
     if (err){
         return console.log(err);
     }
