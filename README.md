@@ -1,19 +1,14 @@
-# PROJECT-TEST
+# README Generator
 
 [![The Unlicense](https://img.shields.io/badge/license-The%20Unlicense-yellow.svg)](https://opensource.org/licenses/unlicense)
 
 ## Description
-Testing markdown generator.
-
+A command-line application that dynamically generates a professional README.md from a user's input using the Inquirer package. 
 
 ## Table of Contents:
   1. [License](#License)
-  2. [Dependencies](#Dependencies)
-  3. [Tests](#Tests)
-  4. [Usage](#Usage)
-  5. [Contributions](#Contributions)
+  2. [Functionality](#Functionality)
   6. [Questions](#Questions)
-
 
 ## License
 Copyright 2020 Puppyburp
@@ -29,20 +24,8 @@ Copyright 2020 Puppyburp
           For more information, please refer to <http://unlicense.org/>
 
 
-## Dependencies
-npm i
-
-
-## Tests
-npm test
-
-
-## Usage 
-Have fun!
-
-
-## Contributions
-Fork and enjoy!
+## Functionality
+[![README demo image](/assets/readme-demo.png)]
 
 
 ## Questions
