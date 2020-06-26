@@ -183,7 +183,7 @@ ${response.description}
 ---
 
 ## License
-${response.license}
+${licenseInfo}
 
 ---
 
