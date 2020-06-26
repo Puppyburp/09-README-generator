@@ -25,7 +25,7 @@ Copyright 2020 Puppyburp
 
 
 ## Functionality
-[![README demo image](/assets/readme-demo.png)]
+![README demo image](/assets/readme-demo.png)
 
 
 ## Questions
