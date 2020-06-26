@@ -69,7 +69,7 @@ inquirer
   // license information
   switch (response.license) {
     case "GNU GPLv3":
-      badge = `[![GNU GPLv3 License](https://img.shields.io/badge/license-GNU%20GPLv3-blue)](https://www.gnu.org/licenses/gpl-3.0.html)
+      badge = `[![GNU GPLv3 License](https://img.shields.io/badge/license-GNU%20GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
       
       Copyright (c) ${year} ${response.githubUsername}
 
@@ -87,7 +87,7 @@ inquirer
       along with this program.  If not, see <https://www.gnu.org/licenses/>`
       break;
       case "MIT License":
-          badge = `[![MIT License](https://img.shields.io/badge/license-MIT-yellowgreen)](https://opensource.org/licenses/MIT)
+          badge = `[![MIT License](https://img.shields.io/badge/license-MIT-yellowgreen.svg)](https://opensource.org/licenses/MIT)
           
           Copyright ${year} ${response.githubUsername}
 
@@ -98,7 +98,7 @@ inquirer
           THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.`
           break;
       case "Apache License 2.0":
-          badge = `[![Apache License 2.0](https://img.shields.io/badge/license-Apache%202.0-orange)](https://opensource.org/licenses/Apache-2.0)
+          badge = `[![Apache License 2.0](https://img.shields.io/badge/license-Apache%202.0-orange.svg)](https://opensource.org/licenses/Apache-2.0)
 
           Copyright ${year} ${response.githubUsername}
 
@@ -116,7 +116,7 @@ inquirer
           break;
 
       case "BSD 3-clause":
-          badge = `[![BSD 3-clause](https://img.shields.io/badge/license-BSD%203--Clause-lightgrey)](https://opensource.org/licenses/BSD-3-Clause)
+          badge = `[![BSD 3-clause](https://img.shields.io/badge/license-BSD%203--Clause-lightgrey.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
           Copyright ${year} ${response.githubUsername}
 
@@ -131,7 +131,7 @@ inquirer
           THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.`
           break;
           case "Boost Software License 1.0":
-          badge = `[![Boost Software License 1.0](https://img.shields.io/badge/license-BSL%201.0-blue)](https://opensource.org/licenses/BSL-1.0)
+          badge = `[![Boost Software License 1.0](https://img.shields.io/badge/license-BSL%201.0-blue.svg)](https://opensource.org/licenses/BSL-1.0)
 
           Copyright ${year} ${response.githubUsername}
           
@@ -142,7 +142,7 @@ inquirer
           THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE LIABLE FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.`
           break;
           case "The Unlicense":
-          badge = `[![The Unlicense](https://img.shields.io/badge/license-The%20Unlicense-yellow)](https://opensource.org/licenses/unlicense)
+          badge = `[![The Unlicense](https://img.shields.io/badge/license-The%20Unlicense-yellow.svg)](https://opensource.org/licenses/unlicense)
 
           Copyright ${year} ${response.githubUsername}
           
@@ -177,13 +177,14 @@ ${response.description}
 
 ------------------------------------
 ##License
+${badge}
 ${response.license}
 ------------------------------------
 ##Dependencies
 ${response.dependencies}
 ------------------------------------
 ##Tests
-${response.test}
+${response.tests}
 ------------------------------------
 ##Usage 
 ${response.usage}
