@@ -170,7 +170,6 @@ ${badge}
 ## Description
 ${response.description}
 
----
 
 ## Table of Contents:
   1. [License](#License)
@@ -180,32 +179,26 @@ ${response.description}
   5. [Contributions](#Contributions)
   6. [Questions](#Questions)
 
----
 
 ## License
 ${licenseInfo}
 
----
 
 ## Dependencies
 ${response.dependencies}
 
----
 
 ## Tests
 ${response.tests}
 
----
 
 ## Usage 
 ${response.usage}
 
----
 
 ## Contributions
 ${response.contributions}
 
----
 
 ## Questions
 Please direction questions to ${response.githubUsername} or email ${response.email}
