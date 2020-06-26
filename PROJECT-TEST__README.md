@@ -40,11 +40,11 @@ npm test
 
 
 ## Usage 
-To have fun!
+Have fun!
 
 
 ## Contributions
-To fork and enjoy!
+Fork and enjoy!
 
 
 ## Questions
