@@ -159,42 +159,42 @@ inquirer
       default:
           badge = "No badge match!";
   }
-    // create the README doc
-    const readmeInputs = `
-    #Title
-    ${response.title}
-    ------------------------------------
-    ##Description
-    ${response.description}
-    ------------------------------------
-    ##Table of Contents:
-      1. [License](#License)
-      2. [Dependencies](#Dependencies)
-      3. [Tests](#Tests)
-      4. [Usage](#Usage)
-      5. [Contributions](#Contributions)
-      6. [Questions](#Questions)
+// create the README doc
+const readmeInputs = `
+#Title
+${response.title}
+------------------------------------
+##Description
+${response.description}
+------------------------------------
+##Table of Contents:
+  1. [License](#License)
+  2. [Dependencies](#Dependencies)
+  3. [Tests](#Tests)
+  4. [Usage](#Usage)
+  5. [Contributions](#Contributions)
+  6. [Questions](#Questions)
 
-    ------------------------------------
-    ##License
-    ${response.license}
-    ------------------------------------
-    ##Dependencies
-    ${response.dependencies}
-    ------------------------------------
-    ##Tests
-    ${response.test}
-    ------------------------------------
-    ##Usage 
-    ${response.usage}
-    ------------------------------------
-    ##Contributions
-    ${response.contributions}
-    ------------------------------------
-    ##Questions
-    Please direction questions to ${response.githubUsername} or email ${response.email}
-    `
-    console.log(response);
+------------------------------------
+##License
+${response.license}
+------------------------------------
+##Dependencies
+${response.dependencies}
+------------------------------------
+##Tests
+${response.test}
+------------------------------------
+##Usage 
+${response.usage}
+------------------------------------
+##Contributions
+${response.contributions}
+------------------------------------
+##Questions
+Please direction questions to ${response.githubUsername} or email ${response.email}
+`
+console.log(response);
 
   // write the README, tell user the file has been created
   fs.writeFile("README.md", readmeInputs, function(err){
