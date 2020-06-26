@@ -167,9 +167,6 @@ inquirer
     ##Description
     ${response.description}
     ------------------------------------
-    ##Badge
-    ${badge}
-    ------------------------------------
     ##Table of Contents:
       1. [License](#License)
       2. [Dependencies](#Dependencies)
